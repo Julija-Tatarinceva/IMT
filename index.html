@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Palettes Preview</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+    nav button, .accentButton {
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    main {
+      padding: 2rem;
+    }
+    .palette, .webpage {
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 3rem;
+    }
+    .row {
+      display: flex;
+    }
+    .color {
+      flex: 1;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    .placeholder {
+      padding: 2rem;
+    }
+    .color-list {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      background-color: var(--badge-bg, #ccc);
+      color: var(--badge-text, #000);
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="color">Color Palette Showcase</h1>
+  </header>
+  <nav>
+    <button onclick="showPalette('palette1')">Mono Light</button>
+    <button onclick="showPalette('palette2')">Mono Dark</button>
+    <button onclick="showPalette('palette3')">Analog Light</button>
+    <button onclick="showPalette('palette4')">Analog Dark</button>
+  </nav>
+  <main>
+    <section id="palette1">
+      <div class="webpage">
+        <div class="row"><div class="color" style="background:#BE185D">Header</div></div>
+        <div class="placeholder" style="background:#FCE4EC; color:#5b1a30">
+          <h2>Monochromatic Light</h2>
+          <p>This is a sample webpage using the Monochromatic Light palette.</p>
+          <div class="card"><h3>Card Title</h3><p>This is a card component that uses detail and text colors from the palette.</p></div>
+                    <p>Here's a <span class="link">link</span> to see the palette's link styling.</p>
+          <button class="accentButton">Accent Button</button>
+          <div class="badge">Badge</div>
+        </div>
+        <div class="row">
+          <div class="color" style="background:#F06292">Primary</div>
+          <div class="color" style="background:#dd2260">Accent</div>
+          <div class="color" style="background:#9a1844">Deep Pink</div>
+        </div>
+        <div class="row"><div class="color" style="background:#9a1844">Footer</div></div>
+        <div class="color-list">
+          Used colors: #FCE4EC (background), #5b1a30 (text/footer), #F472B6 (primary/nav/button), #FB7185, #BE185D
+        </div>
+      </div>
+    </section>
+
+    <section id="palette2">
+      <div class="webpage">
+        <div class="row"><div class="color" style="background:#B82554">Header</div></div>
+        <div class="placeholder" style="background:#2b171e; color:#F8CAD9">
+          <h2>Monochromatic Dark</h2>
+          <p>This is a sample webpage using the Monochromatic Dark palette.</p>
+          <div class="card"><h3>Card Title</h3><p>This is a card component that uses detail and text colors from the palette.</p></div>
+                    <p>Here's a <span class="link">link</span> to see the palette's link styling.</p>
+          <button class="accentButton">Accent Button</button>
+          <div class="badge">Badge</div>
+        </div>
+        <div class="row">
+          <div class="color" style="background:#EC5C8D">Primary</div>
+          <div class="color" style="background:#F14C79">Accent</div>
+          <div class="color" style="background:#B82554; color:#fff">Light Accent</div>
+        </div>
+        <div class="row"><div class="color" style="background:#B82554; color:#fff">Footer</div></div>
+        <div class="color-list">
+          Used colors: #271118 (background), #FBCFE8 (text/footer), #F472B6 (primary/nav/button), #9D174D, #FBCFE8
+        </div>
+      </div>
+    </section>
+
+    <section id="palette3">
+      <div class="webpage">
+        <div class="row"><div class="color" style="background:#0D9488">Header</div></div>
+        <div class="placeholder" style="background:#ECFDF5; color:#064E3B">
+          <h2>Analogous Light</h2>
+          <p>This is a sample webpage using the Analogous Light palette.</p>
+          <div class="card"><h3>Card Title</h3><p>This is a card component that uses background and text colors from the palette.</p></div>
+                    <p>Here's a <span class="link">link</span> to see the palette's link styling.</p>
+          <button class="accentButton">Accent Button</button>
+          <div class="badge">Badge</div>
+        </div>
+        <div class="row">
+          <div class="color" style="background:#10B981">Primary</div>
+          <div class="color" style="background:#2DD4BF">Accent</div>
+          <div class="color" style="background:#0D9488">Highlight</div>
+        </div>
+        <div class="row"><div class="color" style="background:#0D9488">Footer</div></div>
+        <div class="color-list">
+          Used colors: #F0FDF4 (background), #0F172A (text/header/footer), #10B981 (primary/nav/button), #14B8A6 (secondary), #3B82F6 (accent)
+        </div>
+      </div>
+    </section>
+
+    <section id="palette4">
+      <div class="webpage">
+        <div class="row"><div class="color" style="background:#2dc8b6">Header</div></div>
+        <div class="placeholder" style="background:#022C22; color:#ECFDF5">
+          <h2>Analogous Dark</h2>
+          <p>This is a sample webpage using the Analogous Dark palette.</p>
+          <div class="card"><h3>Card Title</h3><p>This is a card component that uses background and text colors from the palette.</p></div>
+                   <p>Here's a <span class="link">link</span> to see the palette's link styling.</p>
+          <button class="accentButton">Accent Button</button>
+          <div class="badge">Badge</div>
+        </div>
+        <div class="row">
+          <div class="color" style="background:#34D399">Primary</div>
+          <div class="color" style="background:#2dc8b6">Accent</div>
+          <div class="color" style="background:#0D9488">Highlight</div>
+        </div>
+        <div class="row"><div class="color" style="background:#0D9488; color:#000">Footer</div></div>
+        <div class="color-list">
+          Used colors: #1F2937 (background), #0F172A (header), #ECFDF5 (text/footer), #34D399 (primary/nav/button), #2DD4BF (secondary), #60A5FA (accent)
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Color Palette Showcase
+  </footer>
+
+  <script>
+    const paletteStyles = {
+      palette1: {
+        background: '#FCE4EC',
+        color: '#5b1a30',
+        navBg: '#F06292',
+        headerBg: '#dd2260',
+        footerBg: '#9a1844',
+        buttonBg: '#F06292',
+accentButtonBg : '#dd2260',
+        badgeBg: '#9a1844',
+        badgeText: '#fff'
+      },
+      palette2: {
+        background: '#2b171e',
+        color: '#F8CAD9',
+        navBg: '#EC5C8D',
+        headerBg: '#F14C79',
+        footerBg: '#B82554',
+        buttonBg: '#EC5C8D',
+accentButtonBg : '#F14C79',
+        badgeBg: '#B82554',
+        badgeText: '#fff'
+      },
+      palette3: {
+        background: '#ECFDF5',
+        color: '#0F172A',
+        navBg: '#10B981',
+        headerBg: '#2DD4BF',
+        footerBg: '#0D9488',
+        buttonBg: '#10B981',
+accentButtonBg : '#2DD4BF',
+        badgeBg: '#0D9488',
+        badgeText: '#fff'
+      },
+      palette4: {
+        background: '#022C22',
+        color: '#ECFDF5',
+        navBg: '#10B981',
+        headerBg: '#2dc8b6',
+        footerBg: '#0D9488',
+        buttonBg: '#10B981',
+accentButtonBg : '#2dc8b6',
+        badgeBg: '#0D9488',
+        badgeText: '#fff'
+      }
+    };
+
+    function showPalette(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      const styles = paletteStyles[id];
+      document.body.style.backgroundColor = styles.background;
+      document.body.style.color = styles.color;
+      document.querySelector('nav').style.backgroundColor = styles.navBg;
+      document.querySelectorAll('nav button').forEach(btn => {
+        btn.style.backgroundColor = styles.buttonBg;
+        btn.style.color = styles.color;
+      });
+document.querySelectorAll('.accentButton').forEach(btn => {
+        btn.style.backgroundColor = styles.accentButtonBg;
+        btn.style.color = styles.color;
+      });
+      document.querySelector('header').style.backgroundColor = styles.headerBg;
+      document.querySelector('footer').style.backgroundColor = styles.footerBg;
+      document.querySelector('footer').style.color = styles.background;
+
+      const root = document.documentElement;
+      root.style.setProperty('--accent-bg', styles.buttonBg);
+      root.style.setProperty('--accent-color', styles.color);
+      root.style.setProperty('--badge-bg', styles.badgeBg);
+      root.style.setProperty('--badge-text', styles.badgeText);
+
+      // Set other element-specific vars (can be further refined as needed)
+      if (id === 'palette1') {
+        root.style.setProperty('--card-bg', '#fff');
+        root.style.setProperty('--card-text', '#831843');
+        root.style.setProperty('--alert-bg', '#F06292');
+        root.style.setProperty('--alert-text', '#5b1a30');
+        root.style.setProperty('--alert-border', '#9a1844');
+        root.style.setProperty('--link-color', '#BE185D');
+      } else if (id === 'palette2') {
+        root.style.setProperty('--card-bg', '#4e323c');
+        root.style.setProperty('--card-text', '#FBCFE8');
+        root.style.setProperty('--alert-bg', '#4B5563');
+        root.style.setProperty('--alert-text', '#FBCFE8');
+        root.style.setProperty('--alert-border', '#9D174D');
+        root.style.setProperty('--link-color', '#F472B6');
+      } else if (id === 'palette3') {
+        root.style.setProperty('--card-bg', '#fff');
+        root.style.setProperty('--card-text', '#0F172A');
+        root.style.setProperty('--alert-bg', '#DCFCE7');
+        root.style.setProperty('--alert-text', '#065F46');
+        root.style.setProperty('--alert-border', '#10B981');
+        root.style.setProperty('--link-color', '#2DD4BF');
+      } else if (id === 'palette4') {
+        root.style.setProperty('--card-bg', '#034939');
+        root.style.setProperty('--card-text', '#ECFDF5');
+        root.style.setProperty('--alert-bg', '#334155');
+        root.style.setProperty('--alert-text', '#ECFDF5');
+        root.style.setProperty('--alert-border', '#34D399');
+        root.style.setProperty('--link-color', '#2dc8b6');
+      }
+    }
+
+    window.onload = () => showPalette('palette1');
+  </script>
+  <style>
+    .accent-btn {
+      background-color: var(--accent-bg, #FB7185);
+      color: var(--accent-color, #fff);
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .card {
+      background-color: var(--card-bg, #fff);
+      color: var(--card-text, #000);
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .alert {
+      background-color: var(--alert-bg, #FECACA);
+      color: var(--alert-text, #7F1D1D);
+      padding: 1rem;
+      border-left: 4px solid var(--alert-border, #B91C1C);
+      margin: 1rem 0;
+    }
+    .link {
+      color: var(--link-color, #2563EB);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</body>
+</html>
