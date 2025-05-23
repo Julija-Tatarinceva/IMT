@@ -101,9 +101,6 @@
           <div class="color" style="background:#9a1844">Deep Pink</div>
         </div>
         <div class="row"><div class="color" style="background:#9a1844">Footer</div></div>
-        <div class="color-list">
-          Used colors: #FCE4EC (background), #5b1a30 (text/footer), #F472B6 (primary/nav/button), #FB7185, #BE185D
-        </div>
       </div>
     </section>
 
@@ -124,16 +121,13 @@
           <div class="color" style="background:#B82554; color:#fff">Light Accent</div>
         </div>
         <div class="row"><div class="color" style="background:#B82554; color:#fff">Footer</div></div>
-        <div class="color-list">
-          Used colors: #271118 (background), #FBCFE8 (text/footer), #F472B6 (primary/nav/button), #9D174D, #FBCFE8
-        </div>
       </div>
     </section>
 
     <section id="palette3">
       <div class="webpage">
-        <div class="row"><div class="color" style="background:#0D9488">Header</div></div>
-        <div class="placeholder" style="background:#ECFDF5; color:#064E3B">
+        <div class="row"><div class="color" style="background:#57A356">Header</div></div>
+        <div class="placeholder" style="background:#F9FAE3; color:#0A360A">
           <h2>Analogous Light</h2>
           <p>This is a sample webpage using the Analogous Light palette.</p>
           <div class="card"><h3>Card Title</h3><p>This is a card component that uses background and text colors from the palette.</p></div>
@@ -142,21 +136,18 @@
           <div class="badge">Badge</div>
         </div>
         <div class="row">
-          <div class="color" style="background:#10B981">Primary</div>
-          <div class="color" style="background:#2DD4BF">Accent</div>
-          <div class="color" style="background:#0D9488">Highlight</div>
+          <div class="color" style="background:#9BCD37">Primary</div>
+          <div class="color" style="background:#E5F23D">Accent</div>
+          <div class="color" style="background:#4FA331">Highlight</div>
         </div>
-        <div class="row"><div class="color" style="background:#0D9488">Footer</div></div>
-        <div class="color-list">
-          Used colors: #F0FDF4 (background), #0F172A (text/header/footer), #10B981 (primary/nav/button), #14B8A6 (secondary), #3B82F6 (accent)
-        </div>
+        <div class="row"><div class="color" style="background:#4FA331">Footer</div></div>
       </div>
     </section>
 
     <section id="palette4">
       <div class="webpage">
-        <div class="row"><div class="color" style="background:#2dc8b6">Header</div></div>
-        <div class="placeholder" style="background:#022C22; color:#ECFDF5">
+        <div class="row"><div class="color" style="background:#52A338">Header</div></div>
+        <div class="placeholder" style="background:#061E06; color:#F9FAE3">
           <h2>Analogous Dark</h2>
           <p>This is a sample webpage using the Analogous Dark palette.</p>
           <div class="card"><h3>Card Title</h3><p>This is a card component that uses background and text colors from the palette.</p></div>
@@ -165,14 +156,11 @@
           <div class="badge">Badge</div>
         </div>
         <div class="row">
-          <div class="color" style="background:#34D399">Primary</div>
-          <div class="color" style="background:#2dc8b6">Accent</div>
-          <div class="color" style="background:#0D9488">Highlight</div>
+          <div class="color" style="background:#90C030">Primary</div>
+          <div class="color" style="background:#D2E010">Accent</div>
+          <div class="color" style="background:#52A338">Highlight</div>
         </div>
-        <div class="row"><div class="color" style="background:#0D9488; color:#000">Footer</div></div>
-        <div class="color-list">
-          Used colors: #1F2937 (background), #0F172A (header), #ECFDF5 (text/footer), #34D399 (primary/nav/button), #2DD4BF (secondary), #60A5FA (accent)
-        </div>
+        <div class="row"><div class="color" style="background:#52A338; color:#000">Footer</div></div>
       </div>
     </section>
   </main>
@@ -205,25 +193,25 @@ accentButtonBg : '#F14C79',
         badgeText: '#fff'
       },
       palette3: {
-        background: '#ECFDF5',
-        color: '#0F172A',
-        navBg: '#10B981',
-        headerBg: '#2DD4BF',
-        footerBg: '#0D9488',
-        buttonBg: '#10B981',
-accentButtonBg : '#2DD4BF',
-        badgeBg: '#0D9488',
+        background: '#F9FAE3',
+        color: '#0A360A',
+        navBg: '#E5F23D',
+        headerBg: '#9BCD37',
+        footerBg: '#0A360A',
+        buttonBg: '#E5F23D',
+accentButtonBg : '#E5F23D',
+        badgeBg: '#4FA331',
         badgeText: '#fff'
       },
       palette4: {
-        background: '#022C22',
-        color: '#ECFDF5',
-        navBg: '#10B981',
-        headerBg: '#2dc8b6',
-        footerBg: '#0D9488',
-        buttonBg: '#10B981',
-accentButtonBg : '#2dc8b6',
-        badgeBg: '#0D9488',
+        background: '#061E06',
+        color: '#F9FAE3',
+        navBg: '#D2E010',
+        headerBg: '#90C030',
+        footerBg: '#52A338',
+        buttonBg: '#D2E010',
+accentButtonBg : '#D2E010',
+        badgeBg: '#57A356',
         badgeText: '#fff'
       }
     };
@@ -276,7 +264,7 @@ document.querySelectorAll('.accentButton').forEach(btn => {
         root.style.setProperty('--alert-border', '#10B981');
         root.style.setProperty('--link-color', '#2DD4BF');
       } else if (id === 'palette4') {
-        root.style.setProperty('--card-bg', '#034939');
+        root.style.setProperty('--card-bg', '#264625');
         root.style.setProperty('--card-text', '#ECFDF5');
         root.style.setProperty('--alert-bg', '#334155');
         root.style.setProperty('--alert-text', '#ECFDF5');
